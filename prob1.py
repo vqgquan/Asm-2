@@ -4,7 +4,7 @@
 # Assignment: 2
 # Author: Vu Quoc Gia Quan (s3927120)
 # Created date: 18/12/2021
-# Last modified date: 18/12/2021
+# Last modified date: 19/12/2021
 
 # first_piece = ['8g5NLsQQ5pW94W3BCm', '5LT5Ienbf2HQ', '4XnieV', 'Q9vfm7G', '0WPB49yI8', '8dIomgTLnH7cYO',
 # 'XKmAduWLA', 'xVAC6ZlfyWbLi0DbIm', '2hDZgBAne67a', 'v28G1rCHO0P', '9TPGwI']

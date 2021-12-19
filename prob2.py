@@ -4,13 +4,15 @@
 # Assignment: 2
 # Author: Vu Quoc Gia Quan (s3927120)
 # Created date: 18/12/2021
-# Last modified date: 18/12/2021
+# Last modified date: 19/12/2021
 
 
-# dic = {"L": {"luxury": 49, "standard": 12},
-# "Z": {"luxury": 45, "standard": 26},
-# "N": {"luxury": 8, "standard": 41},
-# "D": {"luxury": 9, "standard": 24}
+# dic = {"U": {"luxury": 14, "standard": 37},
+# "K": {"luxury": 44, "standard": 5},
+# "W": {"luxury": 2, "standard": 5},
+# "T": {"luxury": 13, "standard": 31},
+# "Q": {"luxury": 25, "standard": 18},
+# "O": {"luxury": 36, "standard": 21}
 # }
 
 
@@ -22,6 +24,7 @@ def total_sale(sale_dict):
     :return: integer, dictionary, string
     """
     # Define an empty dictionary,best_salesperson variable and total profit of 0
+    profit_dict = {}
     dict_comm = {}
     total_profit = 0
     best_salesperson = ""
@@ -34,6 +37,8 @@ def total_sale(sale_dict):
         individuals_earning = profit_of_luxury_tour + profit_of_standard_tour
         # Calculate the company's total profit
         total_profit += individuals_earning
+        # Add individuals earning back to profit_dict
+        profit_dict.update({i: individuals_earning})
 
         # Calculate the commission of each type of tour for each employee
         standard_comm = profit_of_standard_tour * 0.1
@@ -44,7 +49,7 @@ def total_sale(sale_dict):
         dict_comm.update({i: total_comm})
 
         # Find out the best salesperson by using the max function
-        best_salesperson = max(dict_comm, key=dict_comm.get)
+        best_salesperson = max(profit_dict, key=profit_dict.get)
 
     # Return necessary value
     return total_profit, dict_comm, best_salesperson

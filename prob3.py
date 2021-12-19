@@ -4,7 +4,7 @@
 # Assignment: 2
 # Author: Vu Quoc Gia Quan (s3927120)
 # Created date: 18/12/2021
-# Last modified date: 18/12/2021
+# Last modified date: 19/12/2021
 
 def shipment_date(product_amount, start_date):
     """
