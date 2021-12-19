@@ -6,6 +6,7 @@
 # Created date: 18/12/2021
 # Last modified date: 18/12/2021
 
+
 def encode_str(s):
     """
     A function to encode the str into number
@@ -14,29 +15,36 @@ def encode_str(s):
     """
     # Call empty variable to store items later on
     x = ""
-    final = ""
+    encoded_s = ""
     number = []
+
+    num_list = []
     # Make a for loop to both translate and reverse the string
-    for i in range(len(s)):
-        x = x + str(ord(s[i]))[::-1]
-    # Add all the newly translated to the number list
-    for i in range(len(x)):
-        number.append(int(x[i]))
-    # Make a for loop to add 1 to even position and if it's 9 then turn it into 0
-    for i in range(len(number)):
-        if i % 2 == 0 and number[i] != 9:
-            number[i] += 1
-        elif number[i] == 9:
-            number[i] = 0
-    # Convert all data in number to string
-    string = [str(x) for x in number]
-    # Add all string value calculated above to final
-    for i in range(len(number)):
-        final = final + string[i]
-    # Return final
-    return final
+    for i in s:
+        x = str(ord(i))[::-1]
+        num_list.append(x)
+    # print(num_list)
+    for j in range(0,len(num_list)):
+        first_time = num_list[j]
+        if j % 2 != 0:
+            for k in range(len(first_time)):
+                second_time = ""
+                y = first_time[k]
+                if k % 2 == 0 and int(y) != 9:
+                    second_time += str(int(y)+1)
+                elif k % 2 == 0 and int(y) == 9:
+                    second_time = str(0)
+                else:
+                    second_time += str(y)
+                encoded_s += second_time
+        else:
+            first_time = num_list[j]
+            encoded_s += first_time
+
+    return encoded_s
 
 
 # Execute the function
-print(encode_str("AiQa1n3lKxWFJPj"))
-print(encode_str("thFgiR0d4C7TXrY"))
+# print(encode_str("6o3UiZ"))
+# print(encode_str("UPIFS26HfVb30NuKWBC"))
+print(encode_str("k3DAVhUYXd"))

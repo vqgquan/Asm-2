@@ -23,12 +23,12 @@ def message_decode(str_list, bin_list):
     # Make a loop that will sort the string list according to the binary list
     for i in range(len(str_list)):
         # Define a variable to store a listed version of element i from the string list
-        change = list(bin_list[i])
+        change = list(str_list[i])
         # Make a conditional statement to decide whether the element i will be sorted ascending or descending order
-        if str_list[i] == "0":
-            sorted(change, reverse=False)
+        if bin_list[i] == "0":
+            change.sort(reverse=False)
         else:
-            sorted(change, reverse=True)
+            change.sort(reverse=True)
         # Now the element of i from the string list will be joined again by using "change" variable
         str_list[i] = " ".join(change)
         # And the last result will be stored through the join function
