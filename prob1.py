@@ -6,8 +6,9 @@
 # Created date: 18/12/2021
 # Last modified date: 18/12/2021
 
-first_piece = ["ab", "dc", "lvq"]
-second_piece = "010"
+# first_piece = ['8g5NLsQQ5pW94W3BCm', '5LT5Ienbf2HQ', '4XnieV', 'Q9vfm7G', '0WPB49yI8', '8dIomgTLnH7cYO',
+# 'XKmAduWLA', 'xVAC6ZlfyWbLi0DbIm', '2hDZgBAne67a', 'v28G1rCHO0P', '9TPGwI']
+# second_piece = "00100100011"
 
 
 # Define translate_code function
@@ -19,7 +20,7 @@ def message_decode(str_list, bin_list):
     :return:string
     """
     # Define a variable to store the result
-    final = ""
+    final_message = ""
     # Make a loop that will sort the string list according to the binary list
     for i in range(len(str_list)):
         # Define a variable to store a listed version of element i from the string list
@@ -30,12 +31,12 @@ def message_decode(str_list, bin_list):
         else:
             change.sort(reverse=True)
         # Now the element of i from the string list will be joined again by using "change" variable
-        str_list[i] = " ".join(change)
+        str_list[i] = "".join(change)
         # And the last result will be stored through the join function
-        final = " ".join(str_list)
+        final_message = "".join(str_list)
     # Return final result
-    return final
+    return final_message
 
 
 # Execute the function
-print(message_decode(first_piece, second_piece))
+# print(message_decode(first_piece, second_piece))

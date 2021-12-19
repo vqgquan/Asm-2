@@ -7,13 +7,11 @@
 # Last modified date: 18/12/2021
 
 
-dic = {"I": {"luxury": 45, "standard": 26},
-       "Q": {"luxury": 48, "standard": 48},
-       "N": {"luxury": 41, "standard": 18},
-       "J": {"luxury": 9, "standard": 22},
-       "C": {"luxury": 6, "standard": 42},
-       "V": {"luxury": 7, "standard": 35}
-       }
+# dic = {"L": {"luxury": 49, "standard": 12},
+# "Z": {"luxury": 45, "standard": 26},
+# "N": {"luxury": 8, "standard": 41},
+# "D": {"luxury": 9, "standard": 24}
+# }
 
 
 def total_sale(sale_dict):
@@ -51,5 +49,5 @@ def total_sale(sale_dict):
     # Return necessary value
     return total_profit, dict_comm, best_salesperson
 
-
-print(total_sale(dic))
+# Execute the function
+# print(total_sale(dic))

@@ -32,7 +32,6 @@ def shipment_date(product_amount, start_date):
     current_day = start_date
     total_product = 0
     total_day = 0
-    estimated_day = 0
     # Add conditional statement to decide when the program is going to start and stop running
     while total_product < product_amount:
         # Add conditional statement to decide product make each day
@@ -58,6 +57,7 @@ def shipment_date(product_amount, start_date):
     # Return total_day
     return total_day
 
-
 # Execute the function
-print(shipment_date(375, 3))
+# print(shipment_date(769, 2))
+# print(shipment_date(633, 6))
+# print(shipment_date(375, 3))
